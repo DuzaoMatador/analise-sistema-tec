@@ -1,0 +1,12 @@
+3 - SELECT nomeFornecedor AS nome, razaoSocial AS razao FROM fornecedor ORDER BY nomeFornecedor ASC;
+
+4 - SELECT nomeProduto FROM produto, itemcompra, compra WHERE itemcompra.idProduto = produto.idProduto
+AND itemcompra.idCompra = compra.idCompra
+AND compra.idFornecedor = 2;
+
+5 - SELECT dataCompra, nomeFornecedor FROM itemcompra, fornecedor, compra 
+WHERE itemcompra.idCompra = compra.idCompra 
+AND compra.idFornecedor = fornecedor.idFornecedor ORDER BY compra.dataCompra DESC;
+
+6 - SELECT count(idProduto) AS comprasEfetuadas FROM itemcompra
+WHERE idProduto = 1;
